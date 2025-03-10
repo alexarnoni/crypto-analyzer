@@ -1,0 +1,25 @@
+# Ignorar ambientes virtuais (na raiz e dentro de backend/frontend)
+venv/
+
+# Ignorar arquivos de configuração sensíveis
+.env
+config.yaml
+
+# Arquivos gerados pelo Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Logs e arquivos temporários
+*.log
+*.sqlite3
+
+# Cache do Streamlit
+frontend/.streamlit/
+
+# Dependências instaladas (você pode usar requirements.txt)
+Pipfile
+Pipfile.lock
+
+# Arquivos do VS Code
+.vscode/
