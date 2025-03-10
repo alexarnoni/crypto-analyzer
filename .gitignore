@@ -1,5 +1,6 @@
-# Ignorar ambientes virtuais (na raiz e dentro de backend/frontend)
-venv/
+# Ignorar ambientes virtuais
+backend/venv/
+frontend/venv/
 
 # Ignorar arquivos de configuração sensíveis
 .env
