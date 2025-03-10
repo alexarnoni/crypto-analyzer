@@ -19,3 +19,15 @@ def obter_preco(cripto: str = "bitcoin", moeda: str = "usd"):
         return response.json()
     
     return {"erro": "Não foi possível obter o preço"}
+
+@app.get("/historico")
+def obter_historico(cripto: str = "bitcoin", dias: int = 7, moeda: str = "usd"):
+    """Obtém o histórico de preços da criptomoeda"""
+    response = requests.get(f"{COINGECKO_URL}/coins/{cripto}/market_chart",
+                            params={"vs_currency": moeda, "days": dias})
+    
+    if response.status_code == 200:
+        data = response.json()
+        return {"precos": data["prices"]}
+    
+    return {"erro": "Não foi possível obter o histórico"}
